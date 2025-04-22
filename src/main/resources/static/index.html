@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Saber Pro - Inicio</title>
+    <!-- Fuentes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+	    body {
+	        font-family: 'Poppins', sans-serif;
+	        margin: 0;
+	        padding: 0;
+	        background-color: #f5f7fa;
+	        color: #2c3e50;
+	    }
+
+	    header {
+	        background: linear-gradient(to right, #002855, #00509d);
+	        color: white;
+	        padding: 60px 20px;
+	        text-align: center;
+	        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	    }
+
+	    header h1 {
+	        font-size: 2.5em;
+	        margin-bottom: 10px;
+			max-width: 800px;
+			margin: 0 auto;
+	    }
+
+	    header p {
+	        font-size: 1.2em;
+	        max-width: 600px;
+	        margin: 0 auto;
+	    }
+
+	    .scroll-down {
+	        margin-top: 20px;
+	        font-size: 1.5em;
+	        cursor: pointer;
+	    }
+
+	    .login-container {
+	        background-color: white;
+	        max-width: 400px;
+	        margin: 40px auto;
+	        padding: 30px;
+	        border-radius: 12px;
+	        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	    }
+
+	    .login-container h2 {
+	        text-align: center;
+	        margin-bottom: 20px;
+	        color: #002855;
+	    }
+
+	    .form-group {
+	        margin-bottom: 20px;
+	    }
+
+	    .form-group label {
+	        display: block;
+	        font-weight: 500;
+	        margin-bottom: 8px;
+	    }
+
+	    .form-control {
+	        width: 100%;
+	        padding: 10px 12px;
+	        border: 1px solid #ccc;
+	        border-radius: 8px;
+	        font-size: 1em;
+	    }
+
+	    .btn {
+	        width: 100%;
+	        padding: 12px;
+	        background-color: #00509d;
+	        color: white;
+	        font-weight: 600;
+	        border: none;
+	        border-radius: 8px;
+	        cursor: pointer;
+	        transition: background-color 0.3s ease;
+	    }
+
+	    .btn:hover {
+	        background-color: #003f7d;
+	    }
+
+	    .features {
+	        display: flex;
+	        justify-content: center;
+	        flex-wrap: wrap;
+	        padding: 40px 20px;
+	        gap: 30px;
+	    }
+
+	    .feature-card {
+	        background-color: white;
+	        width: 300px;
+	        padding: 20px;
+	        border-radius: 12px;
+	        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	        text-align: center;
+	    }
+
+	    .feature-icon {
+	        font-size: 2em;
+	        color: #00509d;
+	        margin-bottom: 15px;
+	    }
+
+	    .feature-card h3 {
+	        color: #002855;
+	        margin-bottom: 10px;
+	    }
+
+	    .feature-card p {
+	        font-size: 0.95em;
+	        color: #555;
+	    }
+
+		footer {
+		    background-color: #001f3f;
+		    color: white;
+		    padding: 40px 20px 20px;
+		    font-size: 0.95em;
+		}
+
+		.footer-container {
+		    display: flex;
+		    flex-wrap: wrap;
+		    justify-content: space-between;
+		    gap: 40px;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		}
+
+		.footer-column {
+		    flex: 1 1 300px;
+		}
+
+		.footer-column h4 {
+		    font-size: 1.1em;
+		    margin-bottom: 15px;
+		    color: #00b4d8;
+		}
+
+		.footer-column p, .footer-column li {
+		    line-height: 1.6;
+		}
+
+		.footer-column ul {
+		    list-style: none;
+		    padding: 0;
+		}
+
+		.footer-column ul li a {
+		    color: #ffffff;
+		    text-decoration: none;
+		    transition: color 0.3s ease;
+		}
+
+		.footer-column ul li a:hover {
+		    color: #00b4d8;
+		}
+
+		.footer-bottom {
+		    text-align: center;
+		    margin-top: 40px;
+		    padding-top: 20px;
+		    border-top: 1px solid #004080;
+		    font-size: 0.9em;
+		}
+
+
+	    .alert {
+	        font-weight: 500;
+	    }
+
+	    @keyframes fadeIn {
+	        from { opacity: 0; }
+	        to { opacity: 1; }
+	    }
+
+	    @keyframes fadeOut {
+	        from { opacity: 1; }
+	        to { opacity: 0; }
+	    }
+	</style>
+
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1 class="animate__animated animate__fadeInDown">Sistema de Gestión y Seguimiento de Exámenes Saber Pro</h1>
+        <p class="animate__animated animate__fadeIn animate__delay-1s">Herramienta integral para el monitoreo y análisis del desempeño en los exámenes de estado</p>
+    </div>
+</header>
+
+<main>
+    <div class="login-container animate__animated animate__fadeInUp">
+        <h2><i class="fas fa-sign-in-alt"></i> Iniciar sesión</h2>
+        
+        <div class="form-group">
+            <label for="username"><i class="fas fa-user"></i> Usuario:</label>
+            <input type="text" id="username" class="form-control" placeholder="Ingresa usuario">
+        </div>
+        
+        <div class="form-group">
+            <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
+            <input type="password" id="password" class="form-control" placeholder="********">
+        </div>
+        
+        <div id="campoDocumento" class="form-group" style="display: none;">
+            <label for="documento"><i class="fas fa-id-card"></i> Número de documento:</label>
+            <input type="text" id="documento" class="form-control" placeholder="Ej: 123456789">
+        </div>
+        
+        <button class="btn" onclick="login()">
+            <i class="fas fa-sign-in-alt"></i> Ingresar
+        </button>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">
+            </div>
+            <h3>Contraseña para ingresar como cordinador</h3>
+            <p>Usurio: coordinador <br> Contraseña: coordinador123</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">
+            </div>
+            <h3>Contraseña para ingresar como estudiante</h3>
+            <p>Usurio: estudiante <br> Contraseña: estudiante123</p>
+        </div>
+        
+       
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Acerca del Sistema</h4>
+            <p>El Sistema de Gestión Saber Pro es una plataforma académica que permite el monitoreo, análisis y reporte del desempeño estudiantil en los exámenes de estado.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Enlaces de Interés</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Consultar Resultados</a></li>
+                <li><a href="#">Manual de Usuario</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Carrera 45 #26-85, Bogotá, Colombia</p>
+            <p><i class="fas fa-envelope"></i> soporte@saberpro.gov.co</p>
+            <p><i class="fas fa-phone"></i> +57 (1) 234 5678</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Sistema de Gestión Saber Pro | Desarrollado por el Ministerio de Educación Nacional</p>
+    </div>
+</footer>
+
+
+<script>
+    const usuarios = [
+        {
+            username: "coordinador",
+            password: "coordinador123",
+            rol: "coordinador"
+        },
+        {
+            username: "estudiante",
+            password: "estudiante123",
+            rol: "estudiante"
+        }
+    ];
+
+    function login() {
+        const user = document.getElementById("username").value.trim();
+        const pass = document.getElementById("password").value;
+
+        const encontrado = usuarios.find(u => u.username === user && u.password === pass);
+
+        if (!encontrado) {
+            showAlert("Usuario o contraseña incorrectos.", "error");
+            return;
+        }
+
+        if (encontrado.rol === "estudiante") {
+            // Mostrar campo documento si es estudiante
+            const docInput = document.getElementById("documento").value.trim();
+
+            if (!docInput) {
+                document.getElementById("campoDocumento").style.display = "block";
+                showAlert("Por favor ingresa tu número de documento.", "warning");
+                return;
+            }
+
+            // Guardamos el documento y rol
+            localStorage.setItem("numeroDocumento", docInput);
+            localStorage.setItem("rol", "estudiante");
+            showAlert("Inicio de sesión exitoso. Redirigiendo...", "success");
+            setTimeout(() => window.location.href = "estudiante.html", 1500);
+        } else {
+            // Coordinador
+            localStorage.setItem("rol", "coordinador");
+            showAlert("Inicio de sesión exitoso. Redirigiendo...", "success");
+            setTimeout(() => window.location.href = "coordinacion.html", 1500);
+        }
+    }
+
+    function scrollToLogin() {
+        document.querySelector('.login-container').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+
+    function showAlert(message, type) {
+        const alert = document.createElement('div');
+        alert.className = `alert alert-${type}`;
+        alert.textContent = message;
+        alert.style.position = 'fixed';
+        alert.style.top = '20px';
+        alert.style.right = '20px';
+        alert.style.padding = '15px 25px';
+        alert.style.borderRadius = '5px';
+        alert.style.color = 'white';
+        alert.style.zIndex = '1000';
+        alert.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        alert.style.animation = 'fadeIn 0.3s ease-out';
+        
+        if (type === 'error') {
+            alert.style.backgroundColor = '#f72585';
+        } else if (type === 'success') {
+            alert.style.backgroundColor = '#4cc9f0';
+        } else if (type === 'warning') {
+            alert.style.backgroundColor = '#f8961e';
+        }
+        
+        document.body.appendChild(alert);
+        
+        setTimeout(() => {
+            alert.style.animation = 'fadeOut 0.3s ease-out';
+            setTimeout(() => document.body.removeChild(alert), 300);
+        }, 3000);
+    }
+
+    // Ocultar campo documento por defecto
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("campoDocumento").style.display = "none";
+        
+        // Animación para elementos con la clase "animate-on-scroll"
+        const animateElements = document.querySelectorAll('.feature-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    });
+</script>
+
+</body>
+</html>
